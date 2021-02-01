@@ -1,0 +1,65 @@
+{
+  "name": "devpies",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "^4.11.3",
+    "@material/list": "^9.0.0",
+    "@react-three/drei": "^2.2.21",
+    "@testing-library/jest-dom": "^5.11.9",
+    "@testing-library/react": "^11.2.3",
+    "@testing-library/user-event": "^12.6.0",
+    "axios": "^0.21.1",
+    "bootstrap": "^4.5.3",
+    "chart.js": "^2.9.4",
+    "create-react-class": "^15.7.0",
+    "drei": "^2.2.21",
+    "google-map-react": "^2.1.9",
+    "mdbreact": "^5.0.1",
+    "node-sass": "^4.14.1",
+    "perfect-scrollbar": "^1.5.0",
+    "react": "^17.0.1",
+    "react-bootstrap": "^1.4.3",
+    "react-bootstrap-date-picker": "^5.1.0",
+    "react-chartjs-2": "^2.11.1",
+    "react-datepicker": "^3.4.1",
+    "react-dom": "^17.0.1",
+    "react-redux": "^7.2.2",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.1",
+    "react-select": "^3.1.1",
+    "react-three-fiber": "^5.3.17",
+    "reactstrap": "^8.8.1",
+    "redux": "^4.0.5",
+    "serve": "^11.3.2",
+    "swiper": "^4.3.5",
+    "three": "^0.124.0",
+    "valtio": "^0.6.3",
+    "web-vitals": "^0.2.4"
+  },
+  "scripts": {
+    "start": "serve -s build",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "heroku-postbuild": "npm run build"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

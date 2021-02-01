@@ -1,0 +1,482 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.menu-route {
+  margin-left: -500px;
+}
+
+.pan-header {
+  height: 100px;
+}
+
+.card-rounded {
+  border-radius: 10px !important;
+  padding-left: 30px !important;
+  padding-right: 30px !important;
+}
+
+.navbar {
+  box-shadow: none !important;
+}
+
+.main-panel {
+  background-color: rgb(235, 235, 235) !important;
+}
+
+.title {
+  color: #5c5c5c;
+}
+
+.tagcloud01 ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.tagcloud01 ul li {
+  display: inline-block;
+  margin: 0 0.3em 0.3em 0;
+  padding: 0;
+}
+.tagcloud01 ul li a {
+  display: inline-block;
+  height: 28px;
+  line-height: 28px;
+  padding: 0 1em;
+  background-color: #fff;
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  color: #333;
+  font-size: 16px;
+  text-decoration: none;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.tagcloud01 ul li a:hover {
+  background-color: #3498db;
+  border: 1px solid #3498db;
+  color: #fff;
+}
+
+.continue-application {
+  --color: #fff;
+  --background: #2ca8ff;
+  --background-hover: #2892dd;
+  --background-left: #2ca8ff;
+  --folder: #f3e9cb;
+  --folder-inner: #beb393;
+  --paper: #fff;
+  --paper-lines: #bbc1e1;
+  --paper-behind: #e1e6f9;
+  --pencil-cap: #fff;
+  --pencil-top: #275efe;
+  --pencil-middle: #fff;
+  --pencil-bottom: #5c86ff;
+  --shadow: rgba(13, 15, 25, 0.2);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 19px;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+  padding: 17px 29px 17px 69px;
+  transition: background 0.3s;
+  color: var(--color);
+  background: var(--bg, var(--background));
+}
+.continue-application > div {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 53px;
+  position: absolute;
+  overflow: hidden;
+  border-radius: 5px 0 0 5px;
+  background: var(--background-left);
+}
+.continue-application > div .folder {
+  width: 23px;
+  height: 27px;
+  position: absolute;
+  left: 15px;
+  top: 13px;
+}
+.continue-application > div .folder .top {
+  left: 0;
+  top: 0;
+  z-index: 2;
+  position: absolute;
+  transform: translateX(var(--fx, 0));
+  transition: transform 0.4s ease var(--fd, 0.3s);
+}
+.continue-application > div .folder .top svg {
+  width: 24px;
+  height: 27px;
+  display: block;
+  fill: var(--folder);
+  transform-origin: 0 50%;
+  transition: transform 0.3s ease var(--fds, 0.45s);
+  transform: perspective(120px) rotateY(var(--fr, 0deg));
+}
+.continue-application > div .folder:before,
+.continue-application > div .folder:after,
+.continue-application > div .folder .paper {
+  content: "";
+  position: absolute;
+  left: var(--l, 0);
+  top: var(--t, 0);
+  width: var(--w, 100%);
+  height: var(--h, 100%);
+  border-radius: 1px;
+  background: var(--b, var(--folder-inner));
+}
+.continue-application > div .folder:before {
+  box-shadow: 0 1.5px 3px var(--shadow), 0 2.5px 5px var(--shadow),
+    0 3.5px 7px var(--shadow);
+  transform: translateX(var(--fx, 0));
+  transition: transform 0.4s ease var(--fd, 0.3s);
+}
+.continue-application > div .folder:after,
+.continue-application > div .folder .paper {
+  --l: 1px;
+  --t: 1px;
+  --w: 21px;
+  --h: 25px;
+  --b: var(--paper-behind);
+}
+.continue-application > div .folder:after {
+  transform: translate(var(--pbx, 0), var(--pby, 0));
+  transition: transform 0.4s ease var(--pbd, 0s);
+}
+.continue-application > div .folder .paper {
+  z-index: 1;
+  --b: var(--paper);
+}
+.continue-application > div .folder .paper:before,
+.continue-application > div .folder .paper:after {
+  content: "";
+  width: var(--wp, 14px);
+  height: 2px;
+  border-radius: 1px;
+  transform: scaleY(0.5);
+  left: 3px;
+  top: var(--tp, 3px);
+  position: absolute;
+  background: var(--paper-lines);
+  box-shadow: 0 12px 0 0 var(--paper-lines), 0 24px 0 0 var(--paper-lines);
+}
+.continue-application > div .folder .paper:after {
+  --tp: 6px;
+  --wp: 10px;
+}
+.continue-application > div .pencil {
+  height: 2px;
+  width: 3px;
+  border-radius: 1px 1px 0 0;
+  top: 8px;
+  left: 105%;
+  position: absolute;
+  z-index: 3;
+  transform-origin: 50% 19px;
+  background: var(--pencil-cap);
+  transform: translateX(var(--pex, 0)) rotate(35deg);
+  transition: transform 0.4s ease var(--pbd, 0s);
+}
+.continue-application > div .pencil:before,
+.continue-application > div .pencil:after {
+  content: "";
+  position: absolute;
+  display: block;
+  background: var(
+    --b,
+    linear-gradient(
+      var(--pencil-top) 55%,
+      var(--pencil-middle) 55.1%,
+      var(--pencil-middle) 60%,
+      var(--pencil-bottom) 60.1%
+    )
+  );
+  width: var(--w, 5px);
+  height: var(--h, 20px);
+  border-radius: var(--br, 2px 2px 0 0);
+  top: var(--t, 2px);
+  left: var(--l, -1px);
+}
+.continue-application > div .pencil:before {
+  clip-path: polygon(0 5%, 5px 5%, 5px 17px, 50% 20px, 0 17px);
+}
+.continue-application > div .pencil:after {
+  --b: none;
+  --w: 3px;
+  --h: 6px;
+  --br: 0 2px 1px 0;
+  --t: 3px;
+  --l: 3px;
+  border-top: 1px solid var(--pencil-top);
+  border-right: 1px solid var(--pencil-top);
+}
+.continue-application:before,
+.continue-application:after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 2px;
+  border-radius: 1px;
+  background: var(--color);
+  transform-origin: 9px 1px;
+  transform: translateX(var(--cx, 0)) scale(0.5) rotate(var(--r, -45deg));
+  top: 26px;
+  right: 16px;
+  transition: transform 0.3s;
+}
+.continue-application:after {
+  --r: 45deg;
+}
+.continue-application:hover {
+  --cx: 2px;
+  --bg: var(--background-hover);
+  --fx: -40px;
+  --fr: -60deg;
+  --fd: 0.15s;
+  --fds: 0s;
+  --pbx: 3px;
+  --pby: -3px;
+  --pbd: 0.15s;
+  --pex: -24px;
+}
+
+.icon-color {
+  color: rgb(168, 168, 168);
+}
+
+.sub-header {
+  font-size: 21px !important;
+}
+
+.color-gray {
+  color: rgb(173, 173, 173);
+}
+
+.mlc-6 {
+  margin-top: 100px;
+}
+
+.rounded-borders {
+  border-radius: 100% !important;
+  width: 75px;
+}
+
+.timetable {
+  display: grid;
+  grid-template-areas: ". week" "time content";
+  grid-template-columns: 120px;
+  grid-template-rows: 60px;
+  width: 100%;
+  height: 70vh;
+}
+.timetable .accent-pink-gradient {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #ee8ebc, #eea08e);
+  transition: 0.2s ease box-shadow, 0.2s ease transform;
+}
+.timetable .accent-pink-gradient:hover {
+  box-shadow: 0 20px 30px 0 rgba(238, 142, 188, 0.3);
+  transform: scale(1.05);
+}
+.timetable .accent-orange-gradient {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #eec08e, #dcee8e);
+  transition: 0.2s ease box-shadow, 0.2s ease transform;
+}
+.timetable .accent-orange-gradient:hover {
+  box-shadow: 0 20px 30px 0 rgba(238, 192, 142, 0.3);
+  transform: scale(1.05);
+}
+.timetable .accent-green-gradient {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #bcee8e, #8eeea0);
+  transition: 0.2s ease box-shadow, 0.2s ease transform;
+}
+.timetable .accent-green-gradient:hover {
+  box-shadow: 0 20px 30px 0 rgba(188, 238, 142, 0.3);
+  transform: scale(1.05);
+}
+.timetable .accent-cyan-gradient {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #8eeec0, #8edcee);
+  transition: 0.2s ease box-shadow, 0.2s ease transform;
+}
+.timetable .accent-cyan-gradient:hover {
+  box-shadow: 0 20px 30px 0 rgba(142, 238, 192, 0.3);
+  transform: scale(1.05);
+}
+.timetable .accent-blue-gradient {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #8ebcee, #a08eee);
+  transition: 0.2s ease box-shadow, 0.2s ease transform;
+}
+.timetable .accent-blue-gradient:hover {
+  box-shadow: 0 20px 30px 0 rgba(142, 188, 238, 0.3);
+  transform: scale(1.05);
+}
+.timetable .accent-purple-gradient {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #c08eee, #ee8edc);
+  transition: 0.2s ease box-shadow, 0.2s ease transform;
+}
+.timetable .accent-purple-gradient:hover {
+  box-shadow: 0 20px 30px 0 rgba(192, 142, 238, 0.3);
+  transform: scale(1.05);
+}
+.timetable .weekend {
+  background: #fbfbfc;
+  color: #87a1ad;
+}
+.timetable .week-names {
+  grid-area: week;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-transform: uppercase;
+  font-size: 12px;
+}
+.timetable .week-names > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  box-shadow: inset 1px 0 0 #eceff1;
+}
+.timetable .time-interval {
+  grid-area: time;
+  display: grid;
+  grid-template-rows: repeat(10, 1fr);
+  font-size: 14px;
+}
+.timetable .time-interval > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  box-shadow: inset 0 1px 0 0 #eceff1;
+}
+.timetable .content-timetable {
+  grid-area: content;
+  display: grid;
+  grid-template-rows: repeat(10, 1fr);
+  grid-template-columns: repeat(7, 1fr);
+}
+.timetable .content-timetable > div {
+  box-shadow: inset 1px 0 0 #eceff1, inset 0 1px 0 0 #eceff1;
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+
+.size-m{
+  height:100px;
+}
+
+.nav-icon-color {
+  color: #4285F4;
+}
+
+.height-flex {
+  height: 110%;
+}
+
+.icon-circle{
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.topbar .dropdown-list .dropdown-header {
+  background-color: #4e73df;
+  border: 1px solid #4e73df;
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+  color: #fff;
+}
+
+.dropdown .dropdown-menu .dropdown-header {
+  font-weight: 800;
+  font-size: .65rem;
+  color: #b7b9cc;
+}
+.dropdown .dropdown-menu .dropdown-header, .sidebar .sidebar-heading, .text-uppercase {
+  text-transform: uppercase!important;
+}
+.dropdown-header {
+  display: block;
+  padding: .5rem 1.5rem;
+  margin-bottom: 0;
+  font-size: .875rem;
+  color: #858796;
+  white-space: nowrap;
+}
+
+.settings-table-height{
+  height: 70vh;
+}
